@@ -1,0 +1,50 @@
+imports System
+
+Class Calculator
+    Public Sub Main(args() As string)
+        Dim first_number, second_number As Integer
+        Dim operate As String
+        Dim result As Integer
+        
+        Console.Write("Please enter the first integer: ")
+        first_number = Convert.ToInt32(Console.ReadLine())
+        
+        Console.Write("Please enter the second integer: ")
+        second_number = Convert.ToInt32(Console.ReadLine())
+                
+        Console.Write("Please enter an operator (+, -, /, *): ")
+        operate = Console.ReadLine()
+ 
+               Select Case operate
+                    Case "-"
+                        result = Min(first_number , second_number)
+                    Case "+"
+                        result = Add(first_number , second_number)
+                    Case "/"
+                        result = Div(first_number , second_number)
+                    Case "*"
+                        result = Mul(first_number , second_number)
+               End Select
+                
+ 
+                Console.WriteLine(first_number.ToString() & operate & second_number.ToString() & " = " & result.ToString())
+                Console.ReadLine()
+    End Sub
+    Function Min(ByVal num1 As Integer, ByVal num2 As Integer) As Integer
+        Return num1 - num2
+
+    End Function
+    Function Add(ByVal num1 As Integer, ByVal num2 As Integer) As Integer
+        Return num1 + num2
+
+    End Function
+    Function Div(ByVal num1 As Integer, ByVal num2 As Integer) As Integer
+        Return num1 / num2
+
+    End Function
+    Function Mul(ByVal num1 As Integer, ByVal num2 As Integer) As Integer
+        Return num1 * num2
+
+    End Function
+
+     End Class			
