@@ -9,7 +9,7 @@ namespace FirstProject
     /// <remarks>
     /// This class can find out even odd digit.
     /// </remarks>
-    /// <list type="evenodd">
+    /// <list>
     /// <item>
     /// <term>Even</term>
     /// <description>Even Operation</description>
